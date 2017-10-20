@@ -15,21 +15,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- *
- * @author ezl
- */
 public class CreateOrder extends Command {
 
     @Override
     String execute(HttpServletRequest request, HttpServletResponse response) throws LoginSampleException {
         HttpSession session = request.getSession();
         User user = (User)session.getAttribute("user");
-        int width = Integer.parseInt(request.getParameter("wide"));
-        int length = Integer.parseInt(request.getParameter("long"));
-        int hight = Integer.parseInt(request.getParameter("high"));
-        Pieces stykList = new Pieces(width, length, hight);
-        LogicFacade.createOrder(stykList, user);
+        int width = Integer.parseInt(request.getParameter("width"));
+        int length = Integer.parseInt(request.getParameter("length"));
+        int hight = Integer.parseInt(request.getParameter("heigth"));
+        Pieces pieces = new Pieces(width, length, hight);
+        LogicFacade.createOrder(pieces, user);
         return user.getRole() + "page";
     }
     
