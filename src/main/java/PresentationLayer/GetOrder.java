@@ -13,10 +13,6 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author ezl
- */
 public class GetOrder extends Command{
 
     @Override

@@ -9,10 +9,6 @@ import FunctionLayer.LoginSampleException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author ezl
- */
 public class SendOrders extends Command{
 
     @Override

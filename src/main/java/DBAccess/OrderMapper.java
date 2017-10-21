@@ -23,7 +23,7 @@ public class OrderMapper {
     {
         try {
             Connection con = Connector.connection();
-            String SQL = "insert into useradmin.order(orderHeight, orderLength, orderWidth, userID) values(?,?,?,?)";
+            String SQL = "insert into useradmin.order(orderHeight, orderLength, orderWidth,  userID) values(?,?,?,?)";
             PreparedStatement ps = con.prepareStatement( SQL, Statement.RETURN_GENERATED_KEYS );
             ps.setInt(1, pieces.getWidth());
             ps.setInt(2, pieces.getLength());
